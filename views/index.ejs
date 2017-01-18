@@ -7,5 +7,13 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <% if (user){ %>
+      <p> You are logged in as <%= user.email %> </p>
+      <a href="/logout">log out</a>
+    <% } else { %>
+      <p>You are not logged in</p>
+      <a href="/login">log in</a>
+      <a href="/register">register</a>
+    <% } %> 
   </body>
 </html>
