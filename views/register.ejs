@@ -7,8 +7,13 @@
   <body>
     <h1>Register</h1>
     <% if (messages){ %>
-      <p><%= messages %> </p>
+      <p><%= messages.toString() %> </p>
     <% } %>
+
+    <% if (errors){ %>
+      <p><%= errors.toString() %> </p>
+    <% } %>
+
     <form action="/register" method="post">
       <div>
           <label>Email:</label>
